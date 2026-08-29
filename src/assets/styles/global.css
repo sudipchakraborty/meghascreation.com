@@ -9,9 +9,8 @@ a { color:inherit; text-decoration:none; }
 button { cursor:pointer; }
 .announcement { height:34px; display:flex; justify-content:center; align-items:center; gap:8px; background:var(--ink); color:#fffaf3; font-size:11px; letter-spacing:.11em; text-transform:uppercase; }
 header { height:86px; padding:0 5vw; display:flex; align-items:center; justify-content:space-between; position:relative; background:var(--paper); z-index:20; }
-.logo { display:flex; align-items:center; gap:10px; font-family:'Italiana',serif; font-size:23px; line-height:.8; }
-.logo > span { width:42px; height:42px; display:grid; place-items:center; border:1px solid var(--clay); border-radius:50% 45% 50% 42%; color:var(--clay); font-size:17px; font-style:italic; transform:rotate(-4deg); }
-.logo small { display:block; margin-top:7px; font-family:'DM Sans'; font-size:8px; letter-spacing:.34em; }
+.logo { display:flex; align-items:center; width:78px; height:72px; overflow:hidden; flex:0 0 auto; }
+.brand-logo { display:block; width:100%; height:100%; object-fit:cover; object-position:center 52%; mix-blend-mode:multiply; }
 nav { display:flex; align-items:center; gap:38px; font-size:13px; }
 nav a,.header-actions button { transition:.25s ease; }
 nav a:hover { color:var(--clay); }
@@ -21,8 +20,9 @@ nav a:hover { color:var(--clay); }
 .header-actions .bag b { position:absolute; right:-1px; top:1px; width:16px; height:16px; border-radius:50%; display:grid; place-items:center; background:var(--clay); color:white; font-size:9px; }
 .menu { display:none!important; }
 .hero { min-height:650px; height:calc(100vh - 120px); max-height:810px; position:relative; overflow:hidden; }
-.hero > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-.hero:after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(248,243,234,.98) 0%,rgba(248,243,234,.86) 33%,rgba(248,243,234,.08) 61%); }
+.hero { background:var(--cream); }
+.hero > img { position:absolute; inset:0 0 0 auto; width:55%; height:100%; object-fit:cover; object-position:center 38%; }
+.hero:after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(248,243,234,1) 0%,rgba(248,243,234,.98) 38%,rgba(248,243,234,.5) 54%,rgba(248,243,234,0) 70%); }
 .hero-copy { position:absolute; z-index:2; left:8vw; top:50%; transform:translateY(-50%); width:min(520px,41vw); }
 .eyebrow { color:var(--clay); letter-spacing:.2em; text-transform:uppercase; font-size:11px; font-weight:600; margin:0 0 20px; }
 h1,h2 { font-family:'Italiana',serif; font-weight:400; margin:0; line-height:1.02; }
@@ -85,8 +85,8 @@ h1 em,h2 em { color:var(--clay); font-weight:400; }
 .newsletter small { opacity:.65; font-size:10px; }
 footer { background:#27231f; color:#f7f0e7; padding:75px 7vw 20px; }
 .footer-main { display:grid; grid-template-columns:2fr repeat(3,1fr); gap:50px; padding-bottom:65px; }
-footer .logo { display:inline-flex; }
-footer .logo > span { border-color:#d69a81; color:#d69a81; }
+footer .logo { display:inline-flex; width:112px; height:104px; background:#fff; border-radius:50%; }
+footer .brand-logo { mix-blend-mode:normal; border-radius:50%; }
 .footer-main > div > p { color:#a9a098; font-size:12px; line-height:1.8; }
 .footer-main h4 { margin:0 0 22px; color:#d69a81; font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
 .footer-main > div:not(:first-child) { display:flex; flex-direction:column; align-items:flex-start; gap:12px; font-size:12px; }
@@ -101,7 +101,7 @@ footer .logo > span { border-color:#d69a81; color:#d69a81; }
   nav.open { display:flex; }
   .header-actions > button:first-child { display:none; }
   .hero { min-height:700px; height:calc(100svh - 120px); }
-  .hero > img { object-position:60% center; }
+  .hero > img { width:58%; object-position:center 34%; }
   .hero:after { background:linear-gradient(90deg,rgba(248,243,234,.97),rgba(248,243,234,.72) 60%,rgba(248,243,234,.05)); }
   .hero-copy { left:7vw; width:70vw; }
   .hero-tag { width:85px; height:85px; font-size:12px; }
@@ -115,7 +115,7 @@ footer .logo > span { border-color:#d69a81; color:#d69a81; }
   header { height:72px; }
   nav { top:72px; }
   .hero { min-height:690px; max-height:none; }
-  .hero > img { object-position:64% center; }
+  .hero > img { width:100%; object-position:center 30%; }
   .hero:after { background:linear-gradient(180deg,rgba(248,243,234,.93) 0%,rgba(248,243,234,.78) 54%,rgba(248,243,234,.05) 100%); }
   .hero-copy { top:42%; left:25px; width:calc(100% - 50px); }
   h1 { font-size:54px; }

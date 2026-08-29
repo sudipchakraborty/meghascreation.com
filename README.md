@@ -2,6 +2,29 @@
 
 React and Vite storefront for Megha's Creation.
 
+## Project structure
+
+```text
+src/
+├── assets/            # Bundled images and global styles
+├── components/
+│   ├── common/        # Small reusable presentation components
+│   ├── home/          # Landing-page sections
+│   ├── layout/        # Header and footer
+│   └── product/       # Reusable catalog components
+├── context/           # Application-wide ecommerce state
+├── data/              # Product catalog and editable site content
+├── hooks/             # Reusable UI state and behavior
+├── pages/             # Route-level page assembly
+├── utils/             # Pure formatting and helper functions
+├── App.jsx            # Providers and application entry
+└── main.jsx           # React DOM bootstrap
+```
+
+Product details are maintained in `src/data/products.js`. Navigation, footer,
+and editorial content are kept in `src/data/siteContent.js`, separate from the
+reusable components that render them.
+
 ## Local development
 
 ```powershell
