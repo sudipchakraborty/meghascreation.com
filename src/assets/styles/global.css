@@ -51,6 +51,7 @@ h1 em,h2 em { color:var(--clay); font-weight:400; }
 .product-card:nth-child(4) img { object-position:99% 70%; transform:scale(1.3); }
 .product-card:hover img { transform:scale(1.05); }
 .product-card:nth-child(2):hover img,.product-card:nth-child(4):hover img { transform:scale(1.38); }
+.product-card.uploaded-product img,.product-card.uploaded-product:hover img { object-position:center; transform:none; }
 .product-image > button { position:absolute; top:14px; right:14px; width:38px; height:38px; border:0; border-radius:50%; background:#fffdf8dc; color:var(--ink); display:grid; place-items:center; }
 .product-image > button.liked { color:var(--clay); }
 .badge { position:absolute; top:14px; left:14px; padding:7px 11px; background:var(--clay); color:white; font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
